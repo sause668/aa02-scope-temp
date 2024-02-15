@@ -1,3 +1,6 @@
+
+
+
 /***********************************************************************
 Write a function using fat arrow syntax named `arrowMyMap` that accepts an array
 and a callback as arguments. The function will return an array of new elements
@@ -18,7 +21,13 @@ console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 
 ***********************************************************************/
 
-// Your code here 
+let arrowMyMap = (arr, cb) => {
+  let result = [];
+  for (let el of arr) {
+    result.push(cb(el));
+  }
+  return result;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

@@ -1,3 +1,6 @@
+
+
+
 /***********************************************************************
 Let's practice writing closures by creating a function named `sandwichMaker()`.
 This function will return another function that will accept a string to add
@@ -17,7 +20,13 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
-// Your code here 
+let sandwichMaker = () => {
+  let sandwichStart = 'One sandwich with tomato';
+
+  return sandwich = (str) => {
+    return sandwichStart += ' and ' + str;
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

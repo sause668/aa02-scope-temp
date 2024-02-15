@@ -1,3 +1,5 @@
+
+
 /***********************************************************************
 Write a function using fat arrow syntax, `arrowAvgValue(array)` that takes in an
 array of numbers and returns the average number. Assign the below function to a
@@ -10,7 +12,15 @@ arrowAvgValue([2, 3, 7]); // => 4
 arrowAvgValue([100, 60, 64]); // => 74.66666666666667
 ***********************************************************************/
 
-// Your code here 
+let arrowAvgValue = arr => {
+  let start = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    start += arr[i];
+  }
+
+  return start / arr.length;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
