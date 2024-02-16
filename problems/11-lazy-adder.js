@@ -22,13 +22,28 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   fat-arrow function
 ***********************************************************************/
 
-// Your code here 
+// Your code here
+let lazyAdder = (firstNum) => {
+    let count = 0;
+    let currentNum = firstNum;
+    let add = (num) => {
+        currentNum += num;
+        console.log(currentNum);
+        if (count < 1) {
+            count++;
+            return add;
+        } else {
+            return currentNum;
+        }
+    };
+    return add;
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-  module.exports = lazyAdder;
+    module.exports = lazyAdder;
 } catch (e) {
-  // catch the ref err
-  module.exports = null;
+    // catch the ref err
+    module.exports = null;
 }

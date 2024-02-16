@@ -28,13 +28,28 @@ Example 4:
 
 ***********************************************************************/
 
-// Your code here 
+// Your code here
+let countDownTimer = (num) => {
+    if (num === 0) {
+        return "Happy New Year!";
+    }
+    let count = num;
+    const day = () => {
+        count -= 1;
+        if (count <= 0) {
+            return "Happy New Year!";
+        } else {
+            return day;
+        }
+    };
+    return day;
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-  module.exports = countDownTimer;
+    module.exports = countDownTimer;
 } catch (e) {
-  // catch the ref err
-  module.exports = null;
+    // catch the ref err
+    module.exports = null;
 }

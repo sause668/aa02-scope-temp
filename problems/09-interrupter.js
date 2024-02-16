@@ -16,13 +16,25 @@ console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 
 ***********************************************************************/
 
-// Your code here 
+// Your code here
+let interrupter = (word) => {
+    return (str) => {
+        let result = [];
+        let strArr = str.split(" ");
+        strArr.forEach((el) => {
+            result.push(el);
+            result.push(word);
+        });
+        result.pop();
+        return result.join(" ");
+    };
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-  module.exports = interrupter;
+    module.exports = interrupter;
 } catch (e) {
-  // catch the ref err
-  module.exports = null;
+    // catch the ref err
+    module.exports = null;
 }

@@ -13,13 +13,30 @@ function returned by recVolume should continue to return the original volume.
 
 ***********************************************************************/
 
-// Your code here 
+// Your code here
+let recVolume = (num) => {
+    let height = num;
+    let width;
+    let length;
+    let getVolume = (val) => {
+        if (width === undefined) {
+            width = val;
+            return getVolume;
+        } else if (length === undefined) {
+            length = val;
+            return height * length * width;
+        } else {
+            return height * length * width;
+        }
+    };
+    return getVolume;
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-  module.exports = recVolume;
+    module.exports = recVolume;
 } catch (e) {
-  // catch the ref err
-  module.exports = null;
+    // catch the ref err
+    module.exports = null;
 }
