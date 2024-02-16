@@ -1,3 +1,6 @@
+
+
+
 /***********************************************************************
 Write a function named `smoothieMachine` that accepts any number of params and
 a function.
@@ -22,7 +25,23 @@ console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 
-// Your code here 
+let smoothieMachine = (...str) => {
+  let starter = "I'm having a smoothie with "
+  let ingredients = [];
+
+  if (str !== undefined) {
+    for (let el of str) {
+      ingredients.push(el)
+    }
+  }
+
+  return (...str) => {
+    for (let el of str) {
+      ingredients.push(el)
+    }
+    return starter + ingredients.join(' and ');
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

@@ -1,3 +1,5 @@
+
+
 /***********************************************************************
 Write a function named `dynamicDivide(divisor)`. The dynamicDivide function will
 return a new function that when invoked will divide the argument number by the
@@ -18,7 +20,13 @@ divideByFive(50); // returns 10
 
 ***********************************************************************/
 
-// Your code here 
+let dynamicDivide = divisor => {
+  let div = divisor;
+
+  return (num) => {
+    return num / divisor;
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

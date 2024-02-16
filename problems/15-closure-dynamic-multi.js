@@ -1,3 +1,5 @@
+
+
 /***********************************************************************
 Let's practice writing closures by creating a method called `dynamicMultiply(num)`.
 The dynamicMultiply function will return a new function that will allow us to
@@ -18,7 +20,13 @@ multiplyByFive(5); // returns 25
 
 ***********************************************************************/
 
-// Your code here 
+let dynamicMultiply = num => {
+  let mult = num;
+
+  return (num1) => {
+    return mult * num1;
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

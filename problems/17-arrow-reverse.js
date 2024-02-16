@@ -1,3 +1,6 @@
+
+
+
 /***********************************************************************
 Write a function arrowReverseString(str) that accepts a string and returns that string
 reversed.
@@ -12,7 +15,14 @@ let result3 = arrowReverseString("potato"); // returns "otatop"
 
 ***********************************************************************/
 
-// Your code here 
+let arrowReverseString = str => {
+  let results = [];
+  for (let i = str.length - 1; i >= 0; i--) {
+    results.push(str[i]);
+  }
+
+  return results.join('');
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 

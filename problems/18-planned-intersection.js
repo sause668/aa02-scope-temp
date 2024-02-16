@@ -1,3 +1,6 @@
+
+
+
 /******************************************************************************
 Write a function named plannedIntersect(firstArr) that takes in an array and
 returns a function. When the function returned by plannedIntersect is invoked
@@ -15,7 +18,23 @@ console.log(fame(["a", "f", "z", "b"])); // returns [ 'f', 'a' ]
 
 *******************************************************************************/
 
-// Your code here 
+let plannedIntersect = (arr1) => {
+  let firstArr = arr1;
+
+  return (arr2) => {
+    let results = [];
+
+    for (let i = 0; i < firstArr.length; i++) {
+      for (let j = 0; j < arr2.length; j++) {
+        if (firstArr[i] === arr2[j]) {
+          results.push(firstArr[i]);
+        }
+      }
+    }
+
+    return results;
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 

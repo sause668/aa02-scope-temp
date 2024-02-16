@@ -1,3 +1,6 @@
+
+
+
 /***********************************************************************
 Write a function named: coupon(discount). The coupon function will intake a
 number to apply as a discount, and will return a function that accepts an array
@@ -15,7 +18,15 @@ console.log(twentyPercent([10, 20, 30])); // [ 8, 16, 24 ]
 
 ***********************************************************************/
 
-// Your code here 
+let coupon = discount => {
+  let dis = discount;
+
+  return (arr) => {
+    return arr.map(val => {
+      return val - (val * dis);
+    })
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
