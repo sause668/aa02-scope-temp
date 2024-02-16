@@ -25,13 +25,25 @@ Example 3:
 
 ***********************************************************************/
 
-// Your code here 
+let coinCollector = (numOfCoin) => {
+    let collection = [];
+    let count = numOfCoin;
+    let coins = (newCoin) => {
+        collection.push(newCoin);
+        if (collection.length === count) {
+            return collection;
+        } else {
+            return coins;
+        }
+    };
+    return coins;
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-  module.exports = coinCollector;
+    module.exports = coinCollector;
 } catch (e) {
-  // catch the ref err
-  module.exports = null;
+    // catch the ref err
+    module.exports = null;
 }

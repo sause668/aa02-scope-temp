@@ -43,13 +43,30 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   be useful
 ***********************************************************************/
 
-// Your code here 
+let curriedSum = (numOfNums) => {
+    if (numOfNums <= 0) {
+        return null;
+    }
+    let numbers = [];
+    let count = numOfNums;
+    let numberCollector = (num) => {
+        numbers.push(num);
+        if (numbers.length === count) {
+            return numbers.reduce((acc, el) => {
+                return (acc += el);
+            }, 0);
+        } else {
+            return numberCollector;
+        }
+    };
+    return numberCollector;
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-  module.exports = curriedSum;
+    module.exports = curriedSum;
 } catch (e) {
-  // catch the ref err
-  module.exports = null;
+    // catch the ref err
+    module.exports = null;
 }
